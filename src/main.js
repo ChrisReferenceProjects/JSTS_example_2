@@ -23,3 +23,8 @@ function redirection(req, res) {
 
   res.redirect(url); // Noncompliant
 }
+
+let arr = ["a", "b", "c"];
+let merged = arr.reduce(function(a, b) {
+  a.concat(b);
+}); // Noncompliant: No return statement, will result in TypeError
